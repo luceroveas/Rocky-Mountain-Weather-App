@@ -8,7 +8,7 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  
+
   let days = [
     "Sunday",
     "Monday",
@@ -44,6 +44,7 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+}
 
 function search(city) {
   let apiKey = "cf3b730931o06a0e6tc4f28493b09cd6";
@@ -77,8 +78,6 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-search("Denver");
-
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -90,4 +89,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-
+search("Denver");
