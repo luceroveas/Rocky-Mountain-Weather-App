@@ -51,3 +51,8 @@ function search(city) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Denver");
