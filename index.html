@@ -16,35 +16,43 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form id="search-form" class="mb-3">
+        <header>
+        <form id="search-form" class="search-form">
           <div class="row">
             <div class="col-9">
               <input
                 type="search"
                 placeholder="Enter a city.."
-                class="form-control"
-                id="city-input"
+                required
+                class="search-form-input"
+                id="search-form-input"
                 autocomplete="off"
               />
             </div>
             <div class="col-3">
               <input
                 type="submit"
-                value="search"
-                class="btn btn-primary w-100"
+                value="Search"
+                class="search-form-button"
               />
             </div>
           </div>
         </form>
 
+        <main>
+          <div class="weather-app-data">
         <div class="overview">
-          <h1 id="city"></h1>
+          <div> 
+             <h1 class="weather-app-city" id="city"></h1>
           <ul>
+            <p class="weather-app-details">
             <li>Last updated: <span id="date"></span></li>
             <li id="description"></li>
+            </p>
           </ul>
           <div class="row">
             <div class="col-6">
+              </div>
               <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
@@ -68,6 +76,8 @@
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
+          </main>
+
         <footer>
         <small>
           <a href="https://github.com/luceroveas/Rocky-Mountain-Weather-App" target="blank">
