@@ -94,3 +94,7 @@ a {
 .weather-frecast-min {
   opacity: 0.5;
 }
+
+.weather-forecast-icon {
+  width: 100%;
+}
